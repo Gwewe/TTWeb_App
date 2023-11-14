@@ -1,10 +1,10 @@
-@import url('https://fonts.google.com/specimen/Sofia+Sans+Condensed?query=sofia')
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'sofia', sans-condensed;
+    font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 body {
@@ -25,17 +25,57 @@ header {
     z-index: 100;
 }
 
-.h2 {
-    font-size: 2em;
+h2 {
+    font-size: 1.5em;
     color: #359381;
     pointer-events: none;
 }
 
-.navigation {
+.Navigation a {
     text-decoration: none;
     color: #359381;
     padding: 6px 15px;
     border-radius: 20px;
     margin: 0 10px;
     font-weight: 600;
+}
+
+.Navigation a:hover, .Navigation a.active {
+    background: #359381;
+    color: #f9f9f9;   
+}
+
+.greeting {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+.hoverText {
+    position: absolute;
+    font-size: 2em; /* Adjust the font size */
+    color: #359381;
+    cursor: pointer;
+}
+
+.hoverText:hover {
+    font-size: 2.5em; /* Adjust the font size on hover */
+}
+
+.large-text {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    justify-content: center;
+    background-color: #359381; /* Green color */
+    color: #fff; /* White text color */
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    padding: 20px;
+    border: 2px solid #333;
+    text-align: center;
+    margin: 0 40px; /* Add more space on margin */
 }

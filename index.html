@@ -4,22 +4,33 @@
     <meta charset="utf-8">
     <meta name="description" content="A journal and task Tracker web application">
     <meta name="keywords" content="journal, todo list, task tracker, web application">
-    <meta name="author" content="Wedna G.">
-    <meta name="viewport" content="width=device-wiwdth, initial-scale=1.0">
-    <!-- viewport is browser window size: 1vw = 1% viewport width, if viewport is 50cm wide.-->
-    <title> Task Tracker application</title>
+    <meta name="author" content="Gwewe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker application</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h2> Welcome to your Journal & Task companion</h2>
+        <h2>Welcome to your Journal & Task companion</h2>
         <nav class="Navigation">
-            <a href="#Task-Todo">Task-Todo</a>
+            <a href="#Task-Todo" class="active">Task-Todo</a>
             <a href="Journal">Journal</a>
         </nav>
     </header>
+    <section class="greeting">
+        <div class="hoverText" id="hoverText">
+            <span>Are you ready, </span>
+            <input type="text" id="name" placeholder="Enter your name here">
+            <span>?</span>
+        </div>
+        <div class="large-text" id="largeText" style="font-family: 'Pacifico', cursive; font-size: 18px; padding: 20px; border: 2px solid #333;">
+            Embark on a quest with Task Tracker—an enchanted tool born in the Amazonian forests, drawing inspiration from enchanting wonders. Ready your spirit for this epic journey; together, we shall triumph over your to-do list!
+        </div>
+        
+    </section>
     <main>
 
-    </main> 
+    </main>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
