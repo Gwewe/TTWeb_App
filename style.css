@@ -1,17 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
+/* Style for the body */
 body {
     background: #f9f9f9;
     min-height: 100vh;
     overflow-x: hidden;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;*/
+
+
 }
+/* Style for the background */  
+.parallax-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to ensure the layers stay within the container */
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    will-change: transform; /* Optimize for hardware acceleration */
+}
+
+.layer1 {
+    background-image: url('background/hill1.png');
+    z-index: 1;
+}
+
+.layer2 {
+    background-image: url('background/hill2.png');
+    z-index: 2;
+}
+
+.layer3 {
+    background-image: url('background/hill3.png');
+    z-index: 3;
+}
+
+.layer4 {
+    background-image: url('background/hill4.png');
+    z-index: 4;
+}
+
+.layer5 {
+    background-image: url('background/hill5.png');
+    z-index: 5;
+}
+
+.layer6 {
+    background-image: 
+        url('background/leaf.png');
+    z-index: 6;
+}
+
+.layer7 {
+    background-image: url('background/plant.png');
+    z-index: 7;
+}
+
+.layer8 {
+    background-image: url('background/edited-sun.png');
+    z-index: 8;
+}
+/* Style for the header */
 
 header {
     position: absolute;
@@ -20,15 +90,17 @@ header {
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 100;
 }
 
-h2 {
+#welcomeText {
     font-size: 1.5em;
     color: #359381;
     pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    margin-right: 270px;
 }
 
 .Navigation a {
@@ -51,20 +123,42 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
-.hoverText {
-    position: absolute;
-    font-size: 2em; /* Adjust the font size */
+/* Start button style */
+#start_button {
+    position: relative;
+    font-size: 1.8em; /* Adjust the font size */
     color: #359381;
     cursor: pointer;
 }
 
-.hoverText:hover {
-    font-size: 2.5em; /* Adjust the font size on hover */
+#start_button:hover {
+    font-size: 2em; /* Adjust the font size on hover */
 }
 
+/* Button Disappearance animation */
+@keyframes buttonDisappear {
+    0% { 
+        opacity: 1; 
+    }
+    100% { 
+        opacity: 0;
+        width: 0; /* Set width to 0 to make it effectively disappear */
+        padding: 0; /* Remove padding */
+        border: none; /* Remove border */
+        margin: 0; /* Remove margin */
+    };
+}
+
+#start_button.clicked {
+    animation: buttonDisappear 0.5s ease-in-out;
+    position: relative; /* Keep it relative to its normal flow */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+/* Large text styling */
 .large-text {
     display: flex;
     flex-direction: column; /* Align items vertically */
@@ -78,4 +172,24 @@ h2 {
     border: 2px solid #333;
     text-align: center;
     margin: 0 40px; /* Add more space on margin */
+}
+
+/* Text Appearance Animation */
+@keyframes textAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.large-text.appear {
+    animation: textAppear 3s ease-in-out;
 }

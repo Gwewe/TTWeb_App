@@ -10,21 +10,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="parallax-container">
+        <div class="parallax-layer layer1"></div>
+        <div class="parallax-layer layer2"></div>
+        <div class="parallax-layer layer3"></div>
+        <div class="parallax-layer layer4"></div>
+        <div class="parallax-layer layer5"></div>
+        <div class="parallax-layer layer6"></div>
+        <div class="parallax-layer layer7"></div>
+        <div class="parallax-layer layer8"></div>
+    </div> 
+    <!-- Directly inside the body for a full page background. -->
     <header>
-        <h2>Welcome to your Journal & Task companion</h2>
+        <h2 id="welcomeText">Welcome to your Journal & Task companion</h2>
         <nav class="Navigation">
             <a href="#Task-Todo" class="active">Task-Todo</a>
             <a href="Journal">Journal</a>
         </nav>
     </header>
     <section class="greeting">
-        <div class="hoverText" id="hoverText">
-            <span>Are you ready, </span>
-            <input type="text" id="name" placeholder="Enter your name here">
-            <span>?</span>
+        <div>
+            <button id="start_button" autofocus>Click me to Start !</button>
         </div>
-        <div class="large-text" id="largeText" style="font-family: 'Pacifico', cursive; font-size: 18px; padding: 20px; border: 2px solid #333;">
-            Embark on a quest with Task Tracker—an enchanted tool born in the Amazonian forests, drawing inspiration from enchanting wonders. Ready your spirit for this epic journey; together, we shall triumph over your to-do list!
+        <div class="large-text" id="largeText">
+            Are you ready to embark on a quest with Task Tracker ? An enchanted tool born in the Amazonian forests, drawing inspiration from enchanting wonders. Ready your spirit for this epic journey; together, we shall triumph over your to-do list!
         </div>
         
     </section>

@@ -1,31 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const hoverText = document.getElementById("hoverText");
     const largeText = document.getElementById("largeText");
-    const nameInput = document.getElementById("name");
+    const myStart_button = document.getElementById("start_button"); // get the ID for my start button.
 
-    // Initial state
-    hoverText.style.display = "block";
+    // The iniatial phase of the home page.
     largeText.style.display = "none";
 
-    let timeoutId;
+    // Then event listener add for when user click on button
+    myStart_button.addEventListener("click", function() {
+        updateLargeText();
+        myStart_button.classList.add("clicked!"); // add a class to trigger the button animation.
+        largeText.classList.add("appear");        // Add a class to trigger the text appear animation.
 
-    nameInput.addEventListener("input", function() {
-        clearTimeout(timeoutId); // Clear the previous timeout if any
-        updateHoverText();
     });
 
-    function updateHoverText() {
-        const name = nameInput.value.trim();
-
-        if (name) {
-            // If a name is entered, switch to the largeText state after 3 seconds
-            timeoutId = setTimeout(function() {
-                hoverText.style.display = "none";
-                largeText.style.display = "block";
-            }, 2000);
-        } else {
-            // Otherwise, update the hover text
-            hoverText.querySelector("span").textContent = `Are you ready, ${nameInput.value}?`;
-        }
-    }
+    // Update the state of large text display to my little text, transition (will add or change to CSS animation later).
+    function updateLargeText() {
+        largeText.style.display = "block";
+    };
 });
