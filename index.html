@@ -10,25 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="parallax-container">
-        <div class="parallax-layer layer1"></div>
-        <div class="parallax-layer layer2"></div>
-        <div class="parallax-layer layer3"></div>
-        <div class="parallax-layer layer4"></div>
-        <div class="parallax-layer layer5"></div>
-        <div class="parallax-layer layer6"></div>
-        <div class="parallax-layer layer7"></div>
-        <div class="parallax-layer layer8"></div>
-    </div> 
-    <!-- Directly inside the body for a full page background. -->
     <header>
-        <h2 id="welcomeText">Welcome to your Journal & Task companion</h2>
-        <nav class="Navigation">
-            <a href="#Task-Todo" class="active">Task-Todo</a>
-            <a href="Journal">Journal</a>
+        <h1>
+            <a href="#">Task-Tracker app.</a>
+        </h1>
+
+        <nav role="navigation"> <!--arias expanded attribute for accessibility, menu status expanded or not-->
+            <button id="toggle" aria-expanded="false">Menu</button>
+            <ul id="myMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Task-Todo</a></li>
+                <li><a href="#">Diary</a></li>
+            </ul>
         </nav>
     </header>
-    <section class="greeting">
+    <section>    
+    </section>
+    <!-- <section class="greeting">
         <div>
             <button id="start_button" autofocus>Click me to Start !</button>
         </div>
@@ -36,10 +34,10 @@
             Are you ready to embark on a quest with Task Tracker ? An enchanted tool born in the Amazonian forests, drawing inspiration from enchanting wonders. Ready your spirit for this epic journey; together, we shall triumph over your to-do list!
         </div>
         
-    </section>
+    </section> -->
     <main>
 
-    </main>
+    </main> 
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
